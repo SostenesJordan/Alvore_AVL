@@ -257,7 +257,7 @@ void imprimir(NO* raiz) {
 	
 	if(raiz){ 
 		
-		cout << raiz->informacao;
+		cout << raiz->informacao<<" - "<<altura_no(raiz);
 		cout << endl;
 		imprimir(raiz->esquerda);
 		
@@ -266,7 +266,21 @@ void imprimir(NO* raiz) {
 	}
 	;
 	
+	
+
 
 	
 }
 
+
+void preOrdem_ArvAVL(ArvAVL* raiz) {
+	if (raiz == NULL)
+		return;
+	if (*raiz != NULL) {
+		//printf("%d\n",(*raiz)->info);
+		//printf("No %d: %d\n",(*raiz)->info,fatorBalanceamento_NO(*raiz));
+		printf("No %d: %d\n", (*raiz)->informacao, altura_no(*raiz));
+		preOrdem_ArvAVL(&((*raiz)->esquerda));
+		preOrdem_ArvAVL(&((*raiz)->direita));
+	}
+}

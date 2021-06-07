@@ -15,6 +15,10 @@ int main()
 	NO* q;
 	int op, x, y;
 
+	
+
+	ArvAVL* Arvore = NULL;
+
     int aux = 0;
     int i = 1;
     int opcao;

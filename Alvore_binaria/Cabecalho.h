@@ -21,3 +21,5 @@ int remove_ArvAVL(ArvAVL* raiz, int valor);
 struct NO* procurarMenor(struct NO* atual);
 
 void imprimir(NO *raiz);
+
+void preOrdem_ArvAVL(ArvAVL* raiz);
